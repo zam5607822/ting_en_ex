@@ -1,0 +1,105 @@
+﻿<!doctype html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8" />
+<style type="text/css">
+html, body{width:100%; height:100%; cursor: pointer;}
+html,body, ul{padding:0; margin:0;}
+body{font-size:24px; color:#fff;}
+body.notSelect{-webkit-user-select:none;}
+li{list-style: none;}
+p{margin-top:0; margin-bottom:0;}
+w{font-weight: normal; border-bottom:1px solid #a0a0a0; color:transparent; text-shadow:none;}
+w.fill{color:#fff; border:none;text-shadow:0 0 1px rgba(0, 0, 0, 0.9);}
+#control{height:20px; width:180px; padding:5px 0; margin:0 auto; visibility: hidden;}
+#control{background-color:#828282; }
+#control li{float:left; width:20px; height:20px; margin:0 5px; cursor: pointer;}
+#control li a{background:url('desktopIcon.png') 0 0 no-repeat; background-size:300px 20px; display: block; width:20px; height:20px;}
+#control li a.play{background-position: 0 0;}
+#control li a.pause{background-position: -20px 0;}
+#control li a.pre{background-position: -40px 0;}
+#control li a.next{background-position: -60px 0;}
+
+#control li a.desktopOn{background-position: -80px 0;}
+
+#control li a.translateOn{background-position: -100px 0;}
+#control li a.translateOff {background-position: -120px 0;}
+#control li a.translateTap {background-position: -140px 0;}
+#control li a.onlyTranslate {background-position: -160px 0;}
+
+#control li a.repeat{background-position:-180px 0;}
+#control li a.repeated{background-position: -200px 0;}
+#control li a.repeatSen{background-position: -220px 0;}
+
+#control li a.read{background-position: -240px 0;}
+#control li a.dictation{background-position: -260px 0;}
+#control li a.fillword{background-position: -280px 0;}
+
+#content{margin:0 auto; cursor: pointer; padding:10px 0; border-radius: 5px; text-align: center; text-shadow:0 0 1px rgba(0, 0, 0, 0.9); }
+#container #content{background-color:rgba(0, 0, 0, 0.5); }
+#paragraph, #translation{padding:10px 0;}
+#paragraph{cursor: move;}
+
+.cword{color:#fff; display: block; text-align: center; display: inline-block; cursor: pointer; min-width:22px; padding:0 18px; margin:10px 9px; line-height: 2; 
+border:1px solid #fff; border-radius: 1em;}
+.correct{color:#59c559 !important;}
+.error{color:#E87979 !important;}
+.animError{
+    color:#fff !important;
+    border-color:transparent !important;
+    -webkit-animation: myfirst 0.5s;
+}
+@-webkit-keyframes myfirst{
+	from {background: #f9f9f9;}
+	to {background: #E87979;}
+}
+
+.noTrans #control{width:180px;}
+.noTrans #transControl{display: none;}
+.noTrans #translation{display: none;}
+
+.transHighlightSet .trans{display: none;}
+.transHighlightSet .transHighlight{color:#e59343;}
+
+#container.hideLrc #translation{display: none;}
+#content .chinese{display: block;}
+#content .displayTip{display: none;}
+#content.showTip .chinese{display: none;}
+#content.showTip .displayTip{display: block;}
+
+#content.showTip .showTrans .chinese{display: block;}
+#content.showTip .showTrans .displayTip{display: none;}
+
+</style>
+<script type="text/javascript" src="jquery_1.9.js"></script>
+</head>
+<body>
+	<div>哈哈</div>
+	<div id="container">
+		<ul id="control">
+			<li id="pre"><a class="pre"></a></li>
+			<li id="playControl"><a class="play"></a></li>
+			<li id="next"><a class="next"></a></li>
+			<li id="transControl"><a class="translateOn"></a></li>
+			<li id="repeatControl"><a class="repeat"></a></li>
+			<!--<li id="modeControl"><a class="read"></a></li>-->
+			<li id="desktopControl"><a class="desktopOn"></a></li>
+		</ul>
+		<div id="content">
+			<div id="paragraph">asdfasdf
+			</div>
+			<div id="translation">
+				<p class="chinese"></p>
+				<p class="displayTip">点击显示译文阿斯顿发斯蒂芬</p>
+			</div>
+			<div id="choised"></div>
+		</div>
+	</div>
+<script type="text/javascript" src="paragraph.js"></script>
+<script type="text/javascript">
+var paragraph = new Paragraph($('#container'), $('#control'), $('#paragraph'), $('#translation'), $('#dictation'));
+ParagraphApi.pageLoaded('paragraph');
+</script>
+</body>
+</html>

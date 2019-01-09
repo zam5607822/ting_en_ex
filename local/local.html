@@ -1,0 +1,122 @@
+﻿<!doctype html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+	<script type="text/javascript" src="jquery_1.9.js"></script>
+</head>
+<body>
+<div>
+<div class="headerBar">
+    <div class="header">
+        <h1 class="logo"><a class="gotoOnline" style="cursor:pointer"></a></h1>
+        </div>
+    </div>
+</div>
+<div class="rightSide"></div>
+<div class="playPage">
+<div class="content" id="play">
+    <div class="titleBar">
+        <h2 class="state">当前播放哈哈</h2>
+    </div>
+    <div class="article">
+        <div class="itemState">
+            <p class="tipText">请选择左侧的听力列表中的文章进行播放</p>
+        </div>
+        <div class="contentInfo">
+            <div id="videoFrame"></div>
+            <img class="contentImg" src="" width="240" alt="" />
+            <p class="title"></p>
+        </div>
+        <div class="contents">
+            <div class="wrap"></div> 
+            <div class="dictArea">
+                <p class="origin"></p>
+                <div class="translation"></div>
+            </div>
+            <div class="fillwordArea">
+                <div class="translation"></div>
+                <p class="origin"></p>
+                <p class="fillwordTip">请选择下列单词进行填空</p>
+                <div class="choised"></div>
+            </div>
+        </div>
+        <div class="playTip">按住Ctrl点击播放</div>
+    </div>
+</div>
+<div class="content" id="sideBar"></div>
+<div class="sideNav">
+    <div id="level2" class="navSub">
+        <div class="sn-titleBar">
+            <h3 class="gotoOnline">
+                <span>本地听力</span>
+                <div class="arrowRight"></div>
+                <div class="arrowRightAside"></div>
+            </h3>
+        </div>
+        <div class="navItem"></div>
+        <div class="itemState"><span class="loading"></span><p class="tipText">频道列表加载中……</p></div>    
+    </div>
+    <div id="level3" class="navSub">
+        <div id="export">导出听力文件</div>
+        <div class="sn-titleBar">
+            <h3>
+                <span></span>
+                <div class="arrowRight"></div>
+                <div class="arrowRightAside"></div>
+            </h3>
+        </div>
+        <div class="channelInfo">
+            <p class="desc"></p>
+            <ul><li class="spr-times"></li><li class="spr-date"></li></ul>
+            <div style="display: none;" class="sub" id="subControl">订阅</div>
+        </div>
+        <div class="navItem"></div>
+    </div>
+    <div class="slideWidget">
+        <div class="slideOut" id="slideControl"></div>
+    </div>    
+</div>
+<div class="playInfo noTranslate noImage">
+    <div id="tempData"></div>
+    <div class="playContent">
+        <img class="playImg" src="" alt="" />
+        <ul class="playControl">
+            <li class="pre"><a title="上一篇，可使用左箭头控制；可使用 P 键切换到上一句"></a></li>
+            <li class="play" id="playButton"><a title="播放/暂停，可使用空格键切换哈哈"></a></li>
+            <li class="next"><a title="下一篇，可使用右箭头控制；可使用 N 键切换到下一句"></a></li>
+        </ul>
+        <div class="itemState" style="display: none;">
+            <p class="tipText">音频加载中……</p>
+        </div>
+        <p class="title"></p>
+        <div class="bufferC">
+            <div class="buffer">
+                <div class="buffering"></div>
+                <div class="playing"></div>
+                <div class="positionControl"></div>
+            </div>            
+            <!--<div class="playtime"><span class="curtime">00:00</span>/<span class="duration">00:00</span></div>-->
+        </div>        
+        <ul class="modeControls">
+            <li class="normalScreenPlay" id="fullScreenPlay"><a title="全屏播放"></a></li>
+            <li class="translateOn" id="translateControl"><a title="已打开译文，可使用 T 键切换"></a></li>
+            <li class="repeat" id="repeatControl"><a title="重复播放，可使用 R 键切换"> </a></li>
+            <li class="read" id="modeControl"><a title="阅读模式，可使用 M 键切换"></a></li>
+            <li class="desktopOff" id="desktopControl"><a title="已关闭桌面显示文章段落，可使用 D 键切换"></a></li>
+            <li class="sound"><a title="可使用上下箭头调整声音大小"></a></li>
+        </ul>
+    </div>
+    <div class="volumeControl">
+        <div class="volume"></div>
+        <div class="sounds"></div>
+        <div class="soundControl"></div>
+    </div>
+</div>
+</div>
+	<script type="text/javascript" src="resources.js"></script>
+	<script type="text/javascript" src="listenCore.js"></script>
+    <script type="text/javascript" src="media.js"></script>
+</body>
+</html>
